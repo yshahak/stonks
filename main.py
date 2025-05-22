@@ -38,7 +38,8 @@ def main():
     logging.info(f"reading symbols *.json files in {SYMBOLS_DIR} ...")
     for symbol_track_file_path in glob.glob(os.path.join(SYMBOLS_DIR, '*.json'), recursive=True):
         logging.info(f"processing {symbol_track_file_path} ...")
-
+        # if not symbol_track_file_path.endswith('5109889.json'):
+        #     continue
         try:
             with open(symbol_track_file_path) as f:
                 symbol_track_info = json.load(f)
@@ -86,6 +87,7 @@ def main():
                     driver.implicitly_wait(30 * attempt)
                     for request in driver.requests:
                         if request.response:
+                            # print(request)
                             if request.url.startswith('https://api.tase.co.il/api/company/securitydata'):
                                 response = get_issa_rest_api_response(request)
                                 symbol_price = response['LastRate'] / 100  # ILA -> ILS
