@@ -1,7 +1,0 @@
-{
-  "id": "ISAC",
-  "type": "etf",
-  "source": "yahoo_finance",
-  "symbol": "ISAC.L",
-  "currency": "USD"
-}
