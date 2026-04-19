@@ -1,0 +1,7 @@
+{
+  "id": "FUSD",
+  "type": "etf",
+  "source": "yahoo_finance",
+  "symbol": "FUSD.L",
+  "currency": "USD"
+}

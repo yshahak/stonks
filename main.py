@@ -38,7 +38,7 @@ def main():
     logging.info(f"reading symbols *.json files in {SYMBOLS_DIR} ...")
     for symbol_track_file_path in glob.glob(os.path.join(SYMBOLS_DIR, '*.json'), recursive=True):
         logging.info(f"processing {symbol_track_file_path} ...")
-        # if not symbol_track_file_path.endswith('5109889.json'):
+        # if not symbol_track_file_path.endswith('FUSD.json'):
         #     continue
         try:
             with open(symbol_track_file_path) as f:
