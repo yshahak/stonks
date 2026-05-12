@@ -63,8 +63,9 @@ def main():
             elif symbol_track_info['source'] == 'yahoo_finance':
                 ticker_yahoo = yf.Ticker(symbol)
                 symbol_info = ticker_yahoo.history()
-                symbol_price = symbol_info['Close'].iloc[-1]
-                symbol_price_date = symbol_info['Close'].index[-1]
+                close = symbol_info['Close'].dropna()
+                symbol_price = close.iloc[-1]
+                symbol_price_date = close.index[-1]
                 symbol_price_date = datetime.datetime.strftime(symbol_price_date, '%Y-%m-%d')
 
             elif symbol_track_info['source'] == 'issa':
