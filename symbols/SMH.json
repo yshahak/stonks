@@ -1,0 +1,7 @@
+{
+  "id": "SMH",
+  "type": "etf",
+  "source": "yahoo_finance",
+  "symbol": "SMH.L",
+  "currency": "USD"
+}
