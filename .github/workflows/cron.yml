@@ -1,7 +1,7 @@
 name: cron
 on:
   schedule:
-    - cron: '0 6,10,14 * * *'
+    - cron: '0 6,10,14 * * *'  # UTC; re-registered after repo move
   push:
     branches:
       - master
