@@ -1,7 +1,7 @@
 name: cron
 on:
   schedule:
-    - cron: '0 6,10,14 * * *'  # UTC; re-registered after repo move
+    - cron: '23 6,10,14 * * *'  # UTC; off the top of the hour, GitHub drops/delays :00 runs
   push:
     branches:
       - master
